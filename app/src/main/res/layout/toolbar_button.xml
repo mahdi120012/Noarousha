@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#20C581"
+    android:layoutDirection="ltr"
+    android:textDirection="rtl"
+    >
+
+    <ImageView
+        android:id="@+id/imgMassenger"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:visibility="visible"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgInboxMessage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/massenger_test" />
+
+    <ImageView
+        android:id="@+id/imgInboxMessage"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgWriteMessage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgMassenger"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/inbox_message_test" />
+
+    <ImageView
+        android:id="@+id/imgWriteMessage"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgHome"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgInboxMessage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/write_message_test" />
+
+    <ImageView
+        android:id="@+id/imgHome"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:padding="6dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgWriteMessage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_test" />
+
+    <TextView
+        android:id="@+id/txCountNotReadMessage"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/round_red"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="#ffffff"
+        android:textSize="8sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgInboxMessage"
+        app:layout_constraintEnd_toEndOf="@+id/imgInboxMessage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

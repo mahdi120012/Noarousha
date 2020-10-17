@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:layoutDirection="ltr"
+    android:textDirection="ltr"
+    tools:context="hozorghiyab.activities.MohasebeTashvighi">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnMohasebe"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/green_background_button"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/etTedadRozHayeMah"
+        app:layout_constraintStart_toStartOf="@+id/etTedadRozHayeMah"
+        app:layout_constraintTop_toBottomOf="@+id/etTedadRozHayeMah">
+
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/rmedium"
+            android:text="محاسبه"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tolbar_story4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20C581"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="16dp">
+
+            <ImageView
+                android:id="@+id/imgTooTitlelbarMainActf"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/calculate" />
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="50dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_white2" />
+
+            <TextView
+                android:id="@+id/txReciverFamilyInTeacher6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:text="محاسبه تشویقی"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:fontFamily="@font/rmedium"
+                app:layout_constraintBottom_toBottomOf="@+id/imgBack"
+                app:layout_constraintEnd_toStartOf="@+id/imgBack"
+                app:layout_constraintTop_toTopOf="@+id/imgBack" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include
+        android:id="@+id/toolbarButton"
+        layout="@layout/toolbar_button"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etMizanHoghogh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:fontFamily="@font/rmedium"
+        android:gravity="center"
+        android:hint="میزان حقوق"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/tolbar_story4" />
+
+    <EditText
+        android:id="@+id/etTedadMah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="تعداد ماه"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/etMizanHoghogh"
+        app:layout_constraintStart_toStartOf="@+id/etMizanHoghogh"
+        app:layout_constraintTop_toBottomOf="@+id/etMizanHoghogh" />
+
+    <EditText
+        android:id="@+id/etMizanHoghoghKarBeSaat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="میزان حقوق قانون کار"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/etTedadMah"
+        app:layout_constraintStart_toStartOf="@+id/etTedadMah"
+        app:layout_constraintTop_toBottomOf="@+id/etTedadMah" />
+
+    <EditText
+        android:id="@+id/etSaatKarkardRozaneh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="تعداد ساعات کارکرد روزانه"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/etMizanHoghoghKarBeSaat"
+        app:layout_constraintStart_toStartOf="@+id/etMizanHoghoghKarBeSaat"
+        app:layout_constraintTop_toBottomOf="@+id/etMizanHoghoghKarBeSaat" />
+
+    <EditText
+        android:id="@+id/etTedadRozHayeMah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="تعداد روز های کاری در ماه"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/etSaatKarkardRozaneh"
+        app:layout_constraintStart_toStartOf="@+id/etSaatKarkardRozaneh"
+        app:layout_constraintTop_toBottomOf="@+id/etSaatKarkardRozaneh" />
+
+    <TextView
+        android:textDirection="rtl"
+        android:id="@+id/tcCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/rmedium"
+        android:text="۰"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnMohasebe"
+        app:layout_constraintStart_toStartOf="@+id/btnMohasebe"
+        app:layout_constraintTop_toBottomOf="@+id/btnMohasebe" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="55dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_end="55dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

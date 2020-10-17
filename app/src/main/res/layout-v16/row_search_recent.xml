@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:textDirection="rtl"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardPreventCornerOverlap="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/txNameFerestande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rmedium"
+                android:padding="3dp"
+                android:text="نام فرستنده"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/imgUserPicture" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewUnderProfilePicture"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardCornerRadius="50dp"
+                card_view:cardElevation="3dp"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:layout_constraintBottom_toBottomOf="@+id/imgUserPicture"
+                card_view:layout_constraintEnd_toEndOf="@+id/imgUserPicture"
+                card_view:layout_constraintStart_toStartOf="@+id/imgUserPicture"
+                card_view:layout_constraintTop_toTopOf="@+id/imgUserPicture">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewUnderProfilePicture1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    card_view:cardBackgroundColor="#ffffff"
+                    card_view:cardCornerRadius="50dp"
+                    card_view:cardPreventCornerOverlap="false"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/imgUserPicture"
+                    card_view:layout_constraintEnd_toEndOf="@+id/imgUserPicture"
+                    card_view:layout_constraintStart_toStartOf="@+id/imgUserPicture"
+                    card_view:layout_constraintTop_toTopOf="@+id/imgUserPicture">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txMokhaffafName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rmedium"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="3dp"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            card_view:layout_constraintBottom_toBottomOf="parent"
+                            card_view:layout_constraintEnd_toEndOf="parent"
+                            card_view:layout_constraintStart_toStartOf="parent"
+                            card_view:layout_constraintTop_toTopOf="parent"
+                            card_view:lineHeight="19dp" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgUserPicture"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:src="@drawable/usericon222"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0.3dp"
+                android:background="#d9d9d9"
+                android:orientation="vertical"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent">
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

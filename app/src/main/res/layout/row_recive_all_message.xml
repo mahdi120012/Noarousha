@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:textDirection="rtl"
+    card_view:cardBackgroundColor="#ffffff"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="3dp"
+    card_view:cardPreventCornerOverlap="false"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/txDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/rmedium"
+                android:padding="3dp"
+                android:text="##/##/##"
+                android:textSize="14sp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/txMatnRecivedMessage" />
+
+            <TextView
+                android:id="@+id/txOnvanRecevedMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/rmedium"
+                android:padding="3dp"
+                android:text="عنوان پیام"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/txNameFrestandeInRecivedMessage"
+                card_view:lineHeight="19dp" />
+
+            <TextView
+                android:id="@+id/txMatnRecivedMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:padding="3dp"
+                android:text="متن پیام"
+                android:fontFamily="@font/rmedium"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toBottomOf="@+id/txOnvanRecevedMessage"
+                card_view:lineHeight="19dp" />
+
+            <TextView
+                android:id="@+id/txNameFrestandeInRecivedMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/rmedium"
+                android:padding="3dp"
+                android:text="نام فرستنده"
+                android:textColor="#3886c7"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txNameFrestandeInRecivedMessage3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:fontFamily="@font/rmedium"
+                android:padding="3dp"
+                android:text="به"
+                android:textColor="#3886c7"
+                android:textSize="15sp"
+                card_view:layout_constraintBottom_toBottomOf="@+id/txNameFrestandeInRecivedMessage"
+                card_view:layout_constraintEnd_toStartOf="@+id/txNameFrestandeInRecivedMessage"
+                card_view:layout_constraintTop_toTopOf="@+id/txNameFrestandeInRecivedMessage"
+                card_view:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/txNameGirandeInRecivedMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView2"
+                android:fontFamily="@font/rmedium"
+                android:padding="3dp"
+                android:text="نام گیرنده"
+                android:textColor="#3886c7"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                card_view:layout_constraintBottom_toBottomOf="@+id/txNameFrestandeInRecivedMessage3"
+                card_view:layout_constraintEnd_toStartOf="@+id/txNameFrestandeInRecivedMessage3"
+                card_view:layout_constraintTop_toTopOf="@+id/txNameFrestandeInRecivedMessage3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

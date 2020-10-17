@@ -1,0 +1,8 @@
+<resources>
+    <string name="title_activity_listcity_act">ListcityACT</string>
+    <string name="title_activity_kharid_eshterak_act">Kharid_eshterakACT</string>
+    <string name="api">737034ef9c1611889e45f5bbf16a655c</string>
+
+    <string name="app_name">حضور غیاب</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

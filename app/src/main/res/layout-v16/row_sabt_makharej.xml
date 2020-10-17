@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardViewTxDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="2dp"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:textDirection="rtl"
+        card_view:cardBackgroundColor="#abb6c0"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="1dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main_date"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txDateAsli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rmedium"
+                    android:gravity="center"
+                    android:text="afsasf"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:textDirection="rtl"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="3dp"
+        card_view:cardPreventCornerOverlap="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clVorodKhoroj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="1.0"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="1.0">
+
+
+                <TextView
+                    android:id="@+id/txAzYaBe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/rmedium"
+                    android:padding="3dp"
+                    android:text="از"
+                    android:textColor="#3886c7"
+                    android:textSize="15sp"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txNameFrestandeVorodKhoroj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rmedium"
+                    android:padding="3dp"
+                    android:text="نام فرستنده"
+                    android:textColor="#3886c7"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txAzYaBe"
+                    card_view:layout_constraintEnd_toStartOf="@+id/txAzYaBe"
+                    card_view:layout_constraintTop_toTopOf="@+id/txAzYaBe" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clVaziyatTaeid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="visible"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txDate"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="@+id/txDate">
+
+                    <TextView
+                        android:id="@+id/txVaziyatTaeid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rmedium"
+                        android:padding="3dp"
+                        android:text="وضعیت تایید:"
+                        android:textSize="14sp"
+                        android:visibility="visible"
+                        card_view:layout_constraintEnd_toEndOf="parent"
+                        card_view:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgVaziyatTaeid"
+                        android:layout_width="19dp"
+                        android:layout_height="21dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:visibility="visible"
+                        card_view:layout_constraintBottom_toBottomOf="@+id/txVaziyatTaeid"
+                        card_view:layout_constraintEnd_toStartOf="@+id/txVaziyatTaeid"
+                        card_view:layout_constraintStart_toStartOf="parent"
+                        card_view:layout_constraintTop_toTopOf="@+id/txVaziyatTaeid"
+                        card_view:srcCompat="@drawable/dar_entezar_teeid" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/txOnvanRecevedMessage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:fontFamily="@font/rmedium"
+                    android:padding="3dp"
+                    android:text="ساعت ورود:"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    card_view:layout_constraintEnd_toEndOf="parent"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txAzYaBe" />
+
+                <TextView
+                    android:id="@+id/txOnvanRecevedMessage7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rmedium"
+                    android:padding="3dp"
+                    android:text="مجموع کارکرد:"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    card_view:layout_constraintEnd_toEndOf="@+id/txOnvanRecevedMessage3"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txOnvanRecevedMessage3" />
+
+                <TextView
+                    android:id="@+id/txSaatVorod"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rmedium"
+                    android:padding="3dp"
+                    android:text="۰۰:۰۰"
+                    android:textColor="#000000"
+                    android:textDirection="ltr"
+                    android:textSize="15sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txOnvanRecevedMessage3"
+                    card_view:layout_constraintEnd_toStartOf="@+id/txOnvanRecevedMessage3"
+                    card_view:layout_constraintTop_toTopOf="@+id/txOnvanRecevedMessage3" />
+
+                <TextView
+                    android:id="@+id/txMajmoKarkard"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rmedium"
+                    android:padding="3dp"
+                    android:text="۰۰:۰۰"
+                    android:textColor="#000000"
+                    android:textDirection="ltr"
+                    android:textSize="15sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txOnvanRecevedMessage7"
+                    card_view:layout_constraintEnd_toStartOf="@+id/txOnvanRecevedMessage7"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txOnvanRecevedMessage3" />
+
+                <TextView
+                    android:id="@+id/txOnvanRecevedMessage5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rmedium"
+                    android:padding="3dp"
+                    android:text="ساعت خروج:"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txSaatKhoroj"
+                    card_view:layout_constraintStart_toEndOf="@+id/txSaatKhoroj"
+                    card_view:layout_constraintTop_toTopOf="@+id/txSaatKhoroj" />
+
+                <TextView
+                    android:id="@+id/txSaatKhoroj"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/rmedium"
+                    android:padding="3dp"
+                    android:text="۰۰:۰۰"
+                    android:textColor="#000000"
+                    android:textDirection="ltr"
+                    android:textSize="15sp"
+                    card_view:layout_constraintBottom_toBottomOf="@+id/txSaatVorod"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="@+id/txSaatVorod" />
+
+                <TextView
+                    android:id="@+id/txDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_marginBottom="6dp"
+                    android:padding="3dp"
+                    android:text="##/##/##"
+                    android:textColor="#a1aab3"
+                    android:textDirection="ltr"
+                    android:textSize="14sp"
+                    card_view:fontFamily="@font/broya"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintEnd_toEndOf="@+id/txOnvanRecevedMessage7"
+                    card_view:layout_constraintTop_toBottomOf="@+id/txOnvanRecevedMessage7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

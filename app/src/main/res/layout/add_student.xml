@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clActivityStudent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:textDirection="rtl"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tolbar_story"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20C581"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="16dp">
+
+            <ImageView
+                android:id="@+id/imgTooTitlelbarMainActf"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/studenticon" />
+
+            <ImageView
+                android:id="@+id/imgTooTitlelbarMainAct"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/imgBackInAddStudent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/studentpic" />
+
+            <ImageView
+                android:id="@+id/imgBackInAddStudent"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <WebView
+        android:id="@+id/webInAddStudent"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_below="@+id/img_refreshInAddStudent"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/img_refreshInAddStudent"
+        app:layout_constraintStart_toStartOf="@+id/img_refreshInAddStudent"
+        app:layout_constraintTop_toBottomOf="@+id/img_refreshInAddStudent">
+
+
+    </WebView>
+
+
+    <ProgressBar
+        android:id="@+id/progressBarInAddStudent"
+        style="@android:style/Widget.Holo.ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_refreshInAddStudent"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/tx_stateInAddStudent"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:padding="10px"
+        android:src="@drawable/usericon"
+        app:layout_constraintEnd_toEndOf="@+id/tx_stateInAddStudent"
+        app:layout_constraintStart_toStartOf="@+id/tx_stateInAddStudent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_stateInAddStudent" />
+
+    <TextView
+        android:id="@+id/tx_stateInAddStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/adobearabicregular"
+        android:text=" "
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/rvAddStudent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rvAddStudent"
+        app:layout_constraintTop_toBottomOf="@+id/tolbar_story" />
+
+    <ImageView
+        android:id="@+id/imgAfzodanStudentText"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/addstudent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAddStudent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgAfzodanStudentText" />
+
+    <EditText
+        android:id="@+id/etStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@xml/edittext_style"
+        android:backgroundTint="#edecec"
+        android:ems="10"
+        android:gravity="right"
+        android:hint="کد دانش آموز را وارد نمایید"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColorHighlight="#90b1e8"
+        android:textCursorDrawable="@xml/color_cursor"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAddStudent"
+        app:layout_constraintEnd_toStartOf="@+id/imgAddStudent"
+        app:layout_constraintTop_toTopOf="@+id/imgAddStudent" />
+
+
+    <ImageView
+        android:id="@+id/imgAddStudent"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/add"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/imgAfzodanStudentText"
+        app:layout_constraintStart_toStartOf="@+id/imgAfzodanStudentText"
+        app:layout_constraintTop_toBottomOf="@+id/imgAfzodanStudentText" />
+
+    <Spinner
+        android:id="@+id/spinnerInAddStudent"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgAfzodanStudentText"
+        app:layout_constraintEnd_toStartOf="@+id/imgAfzodanStudentText"
+        app:layout_constraintTop_toTopOf="@+id/imgAfzodanStudentText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

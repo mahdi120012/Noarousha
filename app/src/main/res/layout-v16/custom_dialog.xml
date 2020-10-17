@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:textDirection="rtl"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="6dp"
+    card_view:cardPreventCornerOverlap="false">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txMatnHazfPayam"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/b_yekan"
+            android:text="آیا از حذف این پیام اطمینان دارید؟"
+            android:textSize="16sp"
+            card_view:layout_constraintEnd_toEndOf="@+id/txHazfPayam"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/txHazfPayam" />
+
+        <TextView
+            android:id="@+id/txHazfPayam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/b_yekan_bold"
+            android:text="حذف پیام"
+            android:textSize="16sp"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/b_yekan"
+            android:padding="10dp"
+            android:text="لغو"
+            android:textColor="#4991cc"
+            android:textSize="16sp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/txRemove"
+            card_view:layout_constraintStart_toEndOf="@+id/txRad"
+            card_view:layout_constraintTop_toTopOf="@+id/txRemove" />
+
+        <TextView
+            android:id="@+id/txRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/b_yekan"
+            android:padding="10dp"
+            android:text="حذف"
+            android:textColor="#de3a3a"
+            android:textSize="16sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/txMatnHazfPayam" />
+
+        <TextView
+            android:id="@+id/txRad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/b_yekan"
+            android:padding="10dp"
+            android:text="رد"
+            android:textColor="#de3a3a"
+            android:textSize="16sp"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toBottomOf="@+id/txRemove"
+            card_view:layout_constraintStart_toEndOf="@+id/txRemove"
+            card_view:layout_constraintTop_toTopOf="@+id/txRemove" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal"
+    android:textDirection="rtl"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="6dp"
+    card_view:cardPreventCornerOverlap="false">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clErsalNazar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="20dp"
+            android:visibility="visible"
+            card_view:layout_constraintBottom_toTopOf="@+id/clErsalGozaresh"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/reply" />
+
+            <TextView
+                android:id="@+id/txErsalNazar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/b_yekan"
+                android:text="ارسال نظر"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                card_view:layout_constraintBottom_toBottomOf="@+id/imageView10"
+                card_view:layout_constraintEnd_toStartOf="@+id/imageView10"
+                card_view:layout_constraintTop_toTopOf="@+id/imageView10" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clErsalGozaresh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="20dp"
+            android:visibility="visible"
+            card_view:layout_constraintBottom_toTopOf="@+id/clCopy"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/clErsalNazar">
+
+            <ImageView
+                android:id="@+id/imageView112"
+                android:layout_width="21dp"
+                android:layout_height="24dp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/gozaresh_kar_roye_sepordan_kar" />
+
+            <TextView
+                android:id="@+id/txErsalGozaresh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/b_yekan"
+                android:text="ارسال گزارش"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                card_view:layout_constraintBottom_toBottomOf="@+id/imageView112"
+                card_view:layout_constraintEnd_toStartOf="@+id/imageView112"
+                card_view:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCopy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="20dp"
+            card_view:layout_constraintBottom_toTopOf="@+id/clHazf"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/clErsalGozaresh">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/copy" />
+
+            <TextView
+                android:id="@+id/txCopy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/b_yekan"
+                android:text="کپی کردن"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                card_view:layout_constraintBottom_toBottomOf="@+id/imageView11"
+                card_view:layout_constraintEnd_toStartOf="@+id/imageView11"
+                card_view:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clHazf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toTopOf="@+id/clTaeid"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/clCopy">
+
+            <ImageView
+                android:id="@+id/imgRemove"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:visibility="visible"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/trash" />
+
+            <TextView
+                android:id="@+id/txRemove"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/b_yekan"
+                android:text="حذف"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                android:visibility="visible"
+                card_view:layout_constraintBottom_toBottomOf="@+id/imgRemove"
+                card_view:layout_constraintEnd_toStartOf="@+id/imgRemove"
+                card_view:layout_constraintTop_toTopOf="@+id/imgRemove" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTaeid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toTopOf="@+id/clRad"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/clHazf">
+
+            <ImageView
+                android:id="@+id/imgTaeid"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:visibility="visible"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/right" />
+
+            <TextView
+                android:id="@+id/txTaeid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/b_yekan"
+                android:text="تایید"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                android:visibility="visible"
+                card_view:layout_constraintBottom_toBottomOf="@+id/imgTaeid"
+                card_view:layout_constraintEnd_toStartOf="@+id/imgTaeid"
+                card_view:layout_constraintTop_toTopOf="@+id/imgTaeid" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="20dp"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/clTaeid">
+
+            <ImageView
+                android:id="@+id/imgRad"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:visibility="visible"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/rad_kardan" />
+
+            <TextView
+                android:id="@+id/txRad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/b_yekan"
+                android:text="رد"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                android:visibility="visible"
+                card_view:layout_constraintBottom_toBottomOf="@+id/imgRad"
+                card_view:layout_constraintEnd_toStartOf="@+id/imgRad"
+                card_view:layout_constraintTop_toTopOf="@+id/imgRad" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

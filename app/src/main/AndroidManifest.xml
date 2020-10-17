@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hozorghiyab">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="hozorghiyab.activities.MohasebeTashvighi"></activity>
+        <activity android:name="hozorghiyab.activities.TextOnImageJava" />
+        <activity
+            android:name="com.sarthakdoshi.textonimage.TextOnImage"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+        <activity android:name="hozorghiyab.user_info.Main_user_login_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="hozorghiyab.activities.Makharej" />
+        <activity android:name="hozorghiyab.activities.TanzimJalase" />
+        <activity android:name="hozorghiyab.activities.WriteSepordanKar" />
+        <activity android:name="hozorghiyab.activities.RecentSearch" />
+        <activity android:name="hozorghiyab.activities.PvChat" />
+        <activity android:name="hozorghiyab.activities.InboxMessageChat" />
+        <activity android:name="hozorghiyab.activities.VorodKhoroj" />
+        <activity android:name="hozorghiyab.activities.AboutmeACtKt" />
+        <activity android:name="hozorghiyab.activities.VaziyatDarsiAkhlaghi" />
+        <activity android:name="hozorghiyab.activities.ErsalVaziyatDarsiStudent" />
+        <activity android:name="hozorghiyab.activities.GozareshKar" />
+        <activity android:name="hozorghiyab.activities.DarsListInStudentPanel" />
+        <activity android:name="hozorghiyab.activities.WriteNewMessage" />
+        <activity android:name="hozorghiyab.activities.SearchForSendMessage" />
+        <activity android:name="hozorghiyab.activities.ListPayamHayeErsali" />
+        <activity android:name="hozorghiyab.activities.InboxMessage" />
+        <activity android:name="hozorghiyab.activities.ListHameyePayamHaBarayeAdmin" />
+        <activity android:name="hozorghiyab.activities.StudentPanelMainKt" />
+        <activity android:name="hozorghiyab.activities.HozorGhiyabInStudentPanel" />
+        <activity android:name="hozorghiyab.activities.HozorGhiyab" />
+        <activity android:name="hozorghiyab.activities.HozorGhiyabMain" />
+        <activity android:name="hozorghiyab.activities.AddStudent" />
+        <activity android:name="hozorghiyab.activities.AddClassOffline" />
+        <activity android:name="hozorghiyab.activities.AddClass" />
+        <activity
+            android:name="hozorghiyab.user_info.Main_user_register_activity"
+            android:label="UserRegister" />
+        <activity
+            android:name="hozorghiyab.activities.MainActivity"
+            android:label="UserRegister" />
+        <activity android:name="hozorghiyab.activities.Setting" />
+        <activity
+            android:name="hozorghiyab.listCityACT.ListcityACT"
+            android:label="@string/title_activity_listcity_act"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="hozorghiyab.activities.Kharid_eshterakACT"
+            android:label="@string/title_activity_kharid_eshterak_act" />
+        <activity
+            android:name="hozorghiyab.activities.NamayeshVaziyatDarsiStudent"
+            android:label="@string/title_activity_kharid_eshterak_act" />
+        <activity
+            android:name="hozorghiyab.activities.DarkhastMorkhasi"
+            android:label="@string/title_activity_kharid_eshterak_act" />
+
+        <receiver
+            android:name="hozorghiyab.activities.Restarter"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="restartservice" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="hozorghiyab.activities.YourService"
+            android:enabled="true" />
+        <!--
+   //توجه مهم: خط زیر وقتی که میخواهیم از والی استفاده کنیم در اندروید 9 حتما باید باشه وگرنه
+        برنامه اررور میده
+        -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="hozorghiyab.cityDetail.PlaceACT"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

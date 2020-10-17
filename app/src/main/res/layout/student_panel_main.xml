@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:textDirection="rtl"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tolbar_story"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#20C581"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="16dp">
+
+            <ImageView
+                android:id="@+id/imgTooTitlelbarMainActf"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/student" />
+
+            <ImageView
+                android:id="@+id/imgTooTitlelbarMainAct"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/imgNavigationViewInStudentPanel"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/welcomnew" />
+
+            <ImageView
+                android:id="@+id/imgNavigationViewInStudentPanel"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="false"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/open_navigation" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clVaziyatDarsiInStudentPanel"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/imgStudentInMainActivity2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/vaziyat_darsi" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/sahel"
+        android:text="وضعیت درسی و اخلاقی در منزل"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgStudentInMainActivity2"
+        app:layout_constraintEnd_toStartOf="@+id/imgStudentInMainActivity2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgStudentInMainActivity2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clVaziyatDarsiInStudentPanel"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgStudentInMainActivity2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgStudentInMainActivity2">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clWifiInStudentPanel"
+        android:layout_width="409dp"
+        android:layout_height="50dp"
+        android:background="@drawable/wifi_background_style"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tolbar_story">
+
+        <TextView
+            android:id="@+id/tx_stateInStudentPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/sahel"
+            android:text="دسترسی به اینترنت موجود نیست."
+            android:textColor="#868578"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/imgWifiInStudentPanel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imgWifiInStudentPanel" />
+
+        <ImageView
+            android:id="@+id/imgWifiInStudentPanel"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tx_stateInStudentPanel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/wifi" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/imgStudentInMainActivity"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/imgStudentInMainActivity"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBelowLineForUserName"
+        app:srcCompat="@drawable/hozorghiyab_studentpanel" />
+
+    <ImageView
+        android:id="@+id/imageViewBelowLineForUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/clUserNameClick"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/imgUserPicture"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clWifiInStudentPanel"
+        app:srcCompat="@drawable/usericon222" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:fontFamily="@font/sahel"
+        android:text="حضور غیاب"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgStudentInMainActivity"
+        app:layout_constraintEnd_toStartOf="@+id/imgStudentInMainActivity"
+        app:layout_constraintTop_toTopOf="@+id/imgStudentInMainActivity" />
+
+    <TextView
+        android:id="@+id/txStudentNameInStudentPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/sahel"
+        android:text="نام دانش آموز"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUserPicture"
+        app:layout_constraintEnd_toStartOf="@+id/imgUserPicture"
+        app:layout_constraintTop_toTopOf="@+id/imgUserPicture" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHozorGhiyabInStudentPanel"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgStudentInMainActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgStudentInMainActivity">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clUserNameClick"
+
+        android:layout_width="185dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUserPicture"
+        app:layout_constraintEnd_toEndOf="@+id/imgUserPicture"
+        app:layout_constraintStart_toStartOf="@+id/txStudentNameInStudentPanel"
+        app:layout_constraintTop_toTopOf="@+id/imgUserPicture">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/toolbarButton"
+        layout="@layout/toolbar_button"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

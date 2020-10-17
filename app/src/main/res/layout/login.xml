@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:textDirection="rtl"
+    >
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_login" />
+
+            <ImageView
+                android:id="@+id/imgNavigationInLoginPage"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menu_icon" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/rmedium"
+                android:text="حضور غیاب"
+                android:textColor="#ffffff"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgNavigationInLoginPage" />
+
+            <TextView
+                android:id="@+id/textView44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/rmedium"
+                android:text="خوش آمدید"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView43"
+                app:layout_constraintStart_toStartOf="@+id/textView43"
+                app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/imgSetad"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/green_background_button"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/imgLoginTeacher">
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/rmedium"
+                    android:text="ستاد"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/imgMohsenin"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/green_background_button_2"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rmedium"
+                    android:text="محسنین"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:id="@+id/etPasswordStudent"
+                android:layout_width="302dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@xml/edittext_style"
+                android:backgroundTint="#edecec"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="کلمه عبور"
+                android:inputType="number"
+                android:maxLength="55"
+                android:padding="10dp"
+                android:textColorHighlight="#90b1e8"
+                android:textCursorDrawable="@xml/color_cursor"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/etUsernameStudent"
+                app:layout_constraintStart_toStartOf="@+id/etUsernameStudent"
+                app:layout_constraintTop_toBottomOf="@+id/etUsernameStudent" />
+
+            <EditText
+                android:id="@+id/etUsernameStudent"
+                android:layout_width="302dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@xml/edittext_style"
+                android:backgroundTint="#edecec"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="شماره دانش آموزی"
+                android:inputType="number"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:textColorHighlight="#90b1e8"
+                android:textCursorDrawable="@xml/color_cursor"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/imgLoginStudentText"
+                app:layout_constraintStart_toStartOf="@+id/imgLoginStudentText"
+                app:layout_constraintTop_toBottomOf="@+id/imgLoginStudentText" />
+
+            <ImageView
+                android:id="@+id/imgLoginStudent"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/etPasswordStudent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="@+id/etPasswordStudent"
+                app:layout_constraintTop_toBottomOf="@+id/etPasswordStudent"
+                app:srcCompat="@drawable/login_pic" />
+
+            <EditText
+                android:id="@+id/etUsernameTeacher"
+                android:layout_width="302dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@xml/edittext_style"
+                android:backgroundTint="#edecec"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="نام کاربری"
+                android:inputType="number"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:textColorHighlight="#90b1e8"
+                android:textCursorDrawable="@xml/color_cursor"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/imgLoginTeacherText"
+                app:layout_constraintStart_toStartOf="@+id/imgLoginTeacherText"
+                app:layout_constraintTop_toBottomOf="@+id/imgLoginTeacherText" />
+
+            <EditText
+                android:id="@+id/etPasswordTeacher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@xml/edittext_style"
+                android:backgroundTint="#edecec"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="کلمه عبور"
+                android:inputType="number"
+                android:maxLength="55"
+                android:padding="10dp"
+                android:textColorHighlight="#90b1e8"
+                android:textCursorDrawable="@xml/color_cursor"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/etUsernameTeacher"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etUsernameTeacher"
+                app:layout_constraintTop_toBottomOf="@+id/etUsernameTeacher" />
+
+            <ImageView
+                android:id="@+id/imgLoginTeacher"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/etPasswordTeacher"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="@+id/etPasswordTeacher"
+                app:layout_constraintTop_toBottomOf="@+id/etPasswordTeacher"
+                app:srcCompat="@drawable/login_pic" />
+
+            <TextView
+                android:id="@+id/txForgetPasswordStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/adobearabicbold"
+                android:text=" "
+                android:textColor="#25292f"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/imgLoginStudent"
+                app:layout_constraintStart_toStartOf="@+id/imgLoginStudent"
+                app:layout_constraintTop_toBottomOf="@+id/imgLoginStudent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="400dp"
+                android:background="@color/colorBorderRegisterPage"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgSetad"></LinearLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginLeft="80dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="55dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="353dp"
+                android:layout_marginLeft="353dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintGuide_end="55dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/imgLoginStudentText"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/imgMohsenin"
+                app:layout_constraintStart_toStartOf="@+id/imgMohsenin"
+                app:layout_constraintTop_toBottomOf="@+id/imgMohsenin"
+                app:srcCompat="@drawable/loginstudent" />
+
+            <ImageView
+                android:id="@+id/imgLoginTeacherText"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/txForgetPasswordStudent"
+                app:layout_constraintStart_toStartOf="@+id/txForgetPasswordStudent"
+                app:layout_constraintTop_toBottomOf="@+id/txForgetPasswordStudent"
+                app:srcCompat="@drawable/loginostad" />
+
+
+            <ImageView
+                android:id="@+id/imgLoginKarmandText"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="33dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/imgLoginTeacher"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="@+id/imgLoginTeacher"
+                app:layout_constraintTop_toBottomOf="@+id/imgSetad"
+                app:srcCompat="@drawable/loginkarkonan" />
+
+            <EditText
+                android:id="@+id/etUsernameKarkonan"
+                android:layout_width="302dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@xml/edittext_style"
+                android:backgroundTint="#edecec"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="نام کاربری"
+                android:inputType="number"
+                android:maxLength="11"
+                android:padding="10dp"
+                android:textColorHighlight="#90b1e8"
+                android:textCursorDrawable="@xml/color_cursor"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/imgLoginKarmandText"
+                app:layout_constraintStart_toStartOf="@+id/imgLoginKarmandText"
+                app:layout_constraintTop_toBottomOf="@+id/imgLoginKarmandText" />
+
+            <EditText
+                android:id="@+id/etPasswordKarkonan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@xml/edittext_style"
+                android:backgroundTint="#edecec"
+                android:ems="10"
+                android:gravity="right"
+                android:hint="کلمه عبور"
+                android:inputType="number"
+                android:maxLength="55"
+                android:padding="10dp"
+                android:textColorHighlight="#90b1e8"
+                android:textCursorDrawable="@xml/color_cursor"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/etUsernameKarkonan"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etUsernameKarkonan"
+                app:layout_constraintTop_toBottomOf="@+id/etUsernameKarkonan" />
+
+            <ImageView
+                android:id="@+id/imgLoginKarkonan"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/etPasswordKarkonan"
+                app:layout_constraintHorizontal_bias="0.476"
+                app:layout_constraintStart_toStartOf="@+id/etPasswordKarkonan"
+                app:layout_constraintTop_toBottomOf="@+id/etPasswordKarkonan"
+                app:srcCompat="@drawable/login_pic" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView44"
+                app:layout_constraintStart_toStartOf="@+id/textView44"
+                app:layout_constraintTop_toBottomOf="@+id/textView44"
+                app:srcCompat="@drawable/hozorghiyabicon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
